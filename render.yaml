@@ -1,14 +1,11 @@
 services:
   - type: web
-    name: super-p2p-bootstrap
+    name: super-p2p
     env: python
-    region: frankfurt
-    plan: free
-    branch: main
-
-    buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
-    startCommand: "python server.py"
-
+    rootDir: .
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    plan: starter
     envVars:
       - key: PYTHON_VERSION
         value: 3.11
