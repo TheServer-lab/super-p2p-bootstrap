@@ -1,3 +1,4 @@
 flask
 requests
-cryptography==41.0.4
+cryptography==42.0.5
+
